@@ -1,0 +1,350 @@
+/*RESETEOS----------------------------------------------*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*ESTILOS DEL BODY----------------------------------------------*/
+
+body {
+    color: lightslategrey;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120%;
+    font-family: 'Raleway', Arial, sans-serif;
+    background-color: lavender;
+}
+
+
+/*ESTILOS DE BARRA DE NAVEGACION----------------------------------------------*/
+
+nav {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: nav
+}
+
+/*LOGO PICADAS SP----------------------------------------------*/
+.logo img {
+    width: 100%;
+    max-width: 150px;
+
+}
+
+/*MENU HAMBURGUESA-------------------------------------------*/
+.burguer img {
+  max-height: 35px;
+}
+
+
+.menu {
+    width: 100%;
+    display:none;
+}
+
+.menu ul {
+    background-color: black;
+    list-style: none;
+    font-size: 0;
+}
+
+.menu li {
+    background-color: black;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    float: left;
+}
+
+
+/*LINKS DE LOS MENUS-------------------------------------------*/
+.menu a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*ESTILOS DEL HEADER/
+BANNER-------------------------------------------*/
+
+/*BANNER*/
+header {
+    background-image: url('../Media/backtabla.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    color: white;
+    grid-area: header
+}
+
+
+.logo-pica {
+    display: block;
+    text-align: center;
+    transition: all 2s;
+}
+
+.logo-pica:hover {
+    transform: scale(1.2);
+}
+
+/*IMG LOGO*/
+.logo-pica img {
+    width: 100%;
+    max-width: 600px;
+}
+
+/*TEXTO BANNER*/
+
+.display {
+    text-align: center;
+}
+
+/*TITULO BANNER*/
+.display h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 5px black;
+    text-transform: uppercase;
+    padding: 15px;
+    transition: all 1s;
+}
+
+.display h1:hover{
+    transform:scale(0,5. 1);
+    color: brown;
+
+}
+
+/*BAJADA BANNER*/
+.display p{
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px black;
+    padding: 15px;
+}
+
+/*ESTILOS DE GALERIA------------------------------------------*/
+.galeria {
+    background-image: linear-gradient(to bottom, brown, black);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    grid-area: galeria
+}
+
+
+.titulogale p {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.fotos {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 30px;
+}
+
+
+.foto {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 700px;
+    min-width: 300px;
+    min-height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 28px;
+    margin-left: 3px;
+}
+
+.hover:hover {
+    transform: scale(1.2, 1.2);
+}
+
+/*ESTILOS DE COMPRA------------------------------------------*/
+
+.consulta {
+    background-image: linear-gradient(to bottom, brown, black);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    align-self: start;
+    grid-area: compra
+    
+}
+
+
+.compra img {
+width: 100%;   
+}
+
+.compra p {
+    color: white;
+}
+
+.boton {
+    padding-top: 10px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+
+/*SOBRE NOSOTROS*/
+
+.sobrenosotros {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to bottom, black, lightslategrey);
+    grid-area: sobrenosotros
+}
+
+    
+.sobrenosotros p{
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+.sobrenosotros span{
+    display: block;
+}
+
+.centrar {
+    text-align: center;
+    color: white;
+}
+
+/*CONTACTO*/
+
+.contacto {
+    background-image: linear-gradient(to bottom, black, lightslategrey);
+    padding: 10px;
+    grid-area: contacto
+}
+
+.mapa {
+        padding-top: 10px;
+        width: 1000px;
+        height: 400px;
+    }
+
+/*FOOTER*/
+
+footer {
+    background-image: linear-gradient(to bottom, lightslategrey, black);
+    text-align: center; 
+    padding: 25px;
+    grid-area: footer
+    
+}
+
+footer .p {
+   color: white
+}
+
+
+/*ESTILOS DE animacion sutil------------------------------------------*/
+@keyframes latido {
+    0% {width: 500px;}
+    100% {width: 510px;}
+    200% {width: 490px;}
+    50% {width: 510px;}
+    60% {width: 480px;}
+    80% {width: 510px;}
+    100% {width: 500px;}
+}
+
+
+/*GRID-CELDAS DE COMPU*/
+
+@media only screen and (min-width: 1020px) {
+
+    .consulta {
+        position: sticky;
+        top: 0px;
+    }
+    body {
+        display: grid;
+        grid-template-columns: 7fr 2fr 2fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: 
+        "nav nav nav"
+        "header header compra"
+        "galeria galeria compra"
+        "sobrenosotros sobrenosotros compra"
+        "contacto contacto compra"
+        "footer footer footer";
+
+    }
+}
+
+
+/*GRID-CELDAS DE TABLET*/
+@media only screen and (min-width: 600px) {
+
+    .consulta {
+        position: sticky;
+        top: 0px;
+    }
+    body {
+        display: grid;
+        grid-template-columns: 6fr 2fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: 
+        "nav nav"
+        "header header"
+        "galeria compra"
+        "sobrenosotros compra"
+        "contacto compra"
+        "footer compra";
+
+    }
+}
+
+
+@media only screen and (min-width: 320px) {
+    body {
+        display: grid;
+        grid-template-columns: 5fr 2fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        "nav nav"
+        "header compra"
+        "galeria compra"
+        "sobrenosotros compra "
+        "footer footer";
+
+    }
+}
+
+/*COSAS QUE SAQUE
+.logo-pica {
+    display: block;
+    text-align: center;
+    transform: translate(30px, -10px);
+    transform: scale(1,1.2);
+}
+
+.fotoev {
+    flex-grow: 1;
+}
+*/
